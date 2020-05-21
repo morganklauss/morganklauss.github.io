@@ -73,9 +73,11 @@
 	}
 
 	h1 {
-		font-size: 4em;
-		margin: 0 0 (_size(element-margin) * 0.25) 0;
+		font-size: 0.2em;
+		margin: 0 0 (_size(element-margin) ) 0;
 		line-height: 1.3;
+	  text-transform: uppercase; 
+	  color: #f56a6a; 
 	}
 
 	h2 {
