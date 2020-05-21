@@ -259,4 +259,16 @@
 
 			});
 
+			
+	$('.pubbox').hide();
+
+	$('.clicker').click(function(event){
+    event.preventDefault();
+    $($(this).attr('href')).toggle(300);
+	});
+
+
+
+	
+
 })(jQuery);
