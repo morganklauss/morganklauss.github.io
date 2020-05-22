@@ -35,36 +35,49 @@
 								<section>
 									<h2>Blog</h2>
 
+									<!-- Control buttons -->
+									<div id="myBtnContainer"> 
+										<button class="btnblog active" onclick="filterBlogSelection('all')">Show all</button>
+										<button class="btnblog" onclick="filterBlogSelection('research')">Research</button>
+										<!-- <button class="btnblog" onclick="filterBlogSelection('personal')">Personal</button> -->
+									</div>
+									<br><br>
 									<div class="posts">
 										<article>
+											<div class="filterBlogDiv research">
 											<a href="#" class="image"><img src="images/blog_sized_databaseidentity.gif" alt="An animated gif of a woman looking into the camera"></a>
 											<h3><a href="" target="_blank">How We’ve Taught Algorithms to See Identity</a></h3>
 											<p>The outputs produced by facial analysis systems are premised on their training and evaluation data: the images used to “teach” the system what a subject looks like. In our study, we analyze race and gender in training databases from a critical discursive perspective. Specifically, we investigate how race and gender are codified into 92 image databases, many of which are publicly accessible and widely used in computer vision research.
-											</p>
+											</p><br>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="https://medium.com/@morganklausscheuerman/how-weve-taught-algorithms-to-see-identity-a34e2b731dcc" class="button">More</a></li>
 											</ul>
+										</div>
 										</article>
+
 										<article>
+											<div class="filterBlogDiv research">
 											<a href="#" class="image"><img src="images/blog_sized_genderrec.jpg" alt="An image of a person smiling. Their face is framed by a bounding box." /></a>
 											<h3><a href="" target="_blank">How Computers See Gender</a></h3>
 											<p>Have you ever thought about how you, as an individual, are seen by your technology? What does it think of you? How does it classify you? What labels make up who you are? Many technologies are doing this as we speak — making simple determinations about the humans they come into contact with, bucketing them into terms like “woman,” “female,” “age 21–24.”
 											</p><br>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+												<li><a href="https://medium.com/acm-cscw/how-computers-see-gender-7407c81b4015" class="button">More</a></li>
+											</ul></div>
 										</article>
 										<article>
+											<div class="filterBlogDiv research">
 											<a href="#" class="image"><img src="images/blog_sized_safespaces.jpg" alt="An image of a person running on a rainbow road and holding a transgender flag." /></a>
 											<h3><a href="" target="_blank">Safe Spaces and Safe Places: Unpacking Technology-Mediated Experiences of Safety and Harm with Transgender People
 											</a></h3>
 											<p>As researchers and designers, we have the privilege and the power to construct spaces, like social media platforms and apps. In our paper, we discuss the benefits to intentionally employing an intersectional understanding of the way power shapes space to improve the way marginalized users — like transgender users — experience and shape safety in a digitally connected world.
-											</p>
+											</p><br>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+												<li><a href="https://medium.com/acm-cscw/safe-spaces-and-safe-places-3100bd1ffb74" class="button">More</a></li>
+											</ul></div>
 										</article>
 									</div>
+									
 								</section>
 
 						</div>
@@ -116,23 +129,6 @@
 							</footer>
 
 					</div>
-
-
-
-
-
-
-
-			
-
-
-
-
-
-
-
-
-
 			</div>
 
 		<!-- Scripts -->
@@ -141,6 +137,50 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+
+			<script>
+					filterBlogSelection("all")
+					function filterBlogSelection(c) {
+						var x, i;
+						x = document.getElementsByClassName("filterBlogDiv");
+						if (c == "all") c = "";
+						for (i = 0; i < x.length; i++) {
+							w3RemoveClass(x[i], "showBlog");
+							if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "showBlog");
+						}
+					}
+					function w3AddClass(element, name) {
+						var i, arr1, arr2;
+						arr1 = element.className.split(" ");
+						arr2 = name.split(" ");
+						for (i = 0; i < arr2.length; i++) {
+							if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+						}
+					}
+					function w3RemoveClass(element, name) {
+						var i, arr1, arr2;
+						arr1 = element.className.split(" ");
+						arr2 = name.split(" ");
+						for (i = 0; i < arr2.length; i++) {
+							while (arr1.indexOf(arr2[i]) > -1) {
+								arr1.splice(arr1.indexOf(arr2[i]), 1);
+							}
+						}
+						element.className = arr1.join(" ");
+					}
+					// Add active class to the current button (highlight it)
+					var btnContainer = document.getElementById("myBtnContainer");
+					var btns = btnContainer.getElementsByClassName("btnblog");
+					for (var i = 0; i < btns.length; i++) {
+						btns[i].addEventListener("click", function(){
+							var current = document.getElementsByClassName("active");
+							current[0].className = current[0].className.replace(" active", "");
+							this.className += " active";
+						});
+					}
+			</script>
 
 	</body>
 </html>
