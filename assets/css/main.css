@@ -2477,7 +2477,7 @@ button,
 
   div.toggle{display: none;}
 
-  .tab {
+  .tabmenu {
     position: fixed;
     right: 50px;
     top: 25%;
