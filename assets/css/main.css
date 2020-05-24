@@ -2291,8 +2291,14 @@ button,
     color: inherit;
     font-family: "Roboto Slab", serif;
     font-size: 1.125em; }
-  #header .icons {
-    text-align: right; }
+    #header .icons {
+      text-align: right; }
+      .header-left {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: flex-end;
+        float: left;
+     }
   @media screen and (max-width: 1680px) {
     #header {
       padding-top: 5em; } }
