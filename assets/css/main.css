@@ -1617,7 +1617,7 @@ button,
 
 /* Mini Posts */
 .mini-posts article {
-  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  /* border-top: solid 1px rgba(210, 215, 217, 0.75); */
   margin-top: 2em;
   padding-top: 2em; }
   .mini-posts article .image {
@@ -2556,3 +2556,12 @@ button,
   .container {
   overflow: hidden;
 }
+
+
+
+
+
+
+
+
+

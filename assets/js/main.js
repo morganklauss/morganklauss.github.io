@@ -315,4 +315,48 @@
 
 
 
+
+
+
+
+
+
+
+	var $filters = $('.filter [btnblog]'),
+    $boxes = $('.boxes [filterBlogDiv]');
+
+$filters.on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  $filters.removeClass('active');
+  $this.addClass('active');
+
+  var $filterColor = $this.attr('btnblog');
+
+  if ($filterColor == 'all') {
+    $boxes.removeClass('is-animated')
+      .fadeOut().promise().done(function() {
+        $boxes.addClass('is-animated').fadeIn();
+      });
+  } else {
+    $boxes.removeClass('is-animated')
+      .fadeOut().promise().done(function() {
+        $boxes.filter('[filterBlogDiv = "' + $filterColor + '"]')
+          .addClass('is-animated').fadeIn();
+      });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 })(jQuery);
