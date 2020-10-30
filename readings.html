@@ -44,31 +44,63 @@
 										Each entry contains summarizing information about the reading. Entries may also contain notable quotes and 
 										thoughts on its relationship to my own research.<br><br>
 
-										You can filter the readings by type or theme by using the buttons below. Readings are in alphabetical order by author last name.
+										You can filter the readings by type or theme by using the buttons below. Readings are in alphabetical order by author last name. (I apologize in advance for the variety of citation styles.)
 										<br><br>
 									</section>
 
 									<!-- Control buttons -->
+									<center>
 									<div id="myBtnContainer"> 
-										<button class="btnblog active" onclick="filterBlogSelection('all')">Show all</button>
+										<button class="btnblog active" onclick="filterBlogSelection('all')">Show all</button><br>
+										<p style="font-family:Roboto Slab">Higher Level Filters:</p>
 										<button class="btnblog" onclick="filterBlogSelection('critique')">Critique</button>
+										<button class="btnblog" onclick="filterBlogSelection('empirical')">Empirical</button>
+										<button class="btnblog" onclick="filterBlogSelection('essay')">Essay</button>
 										<button class="btnblog" onclick="filterBlogSelection('methods')">Methods</button>
 										<button class="btnblog" onclick="filterBlogSelection('theory')">Theory</button>
-										<button class="btnblog" onclick="filterBlogSelection('empirical')">Empirical</button>
 										<!-- <button class="btnblog" onclick="filterBlogSelection('personal')">Personal</button> -->
 
-										<br><br>
+										<br>
+										<p style="font-family:Roboto Slab">Theme Filters:</p>
+										<button class="btnblog" onclick="filterBlogSelection('decolonial')">Decolonial Studies</button>
+										<button class="btnblog" onclick="filterBlogSelection('definition')">Definition</button>
+										<button class="btnblog" onclick="filterBlogSelection('feminist')">Feminist Theory</button>
 										<button class="btnblog" onclick="filterBlogSelection('identity')">Identity</button>
 										<button class="btnblog" onclick="filterBlogSelection('inequity')">Inequity</button>
+										<button class="btnblog" onclick="filterBlogSelection('philosophy-science')">Philosophy of Science</button>
+										<button class="btnblog" onclick="filterBlogSelection('queer')">Queer Theory</button>
+										<button class="btnblog" onclick="filterBlogSelection('queer-of-color')">Queer of Color Critique</button>
 										<button class="btnblog" onclick="filterBlogSelection('transparency')">Transparency</button>
 										<button class="btnblog" onclick="filterBlogSelection('surveillance')">Surveillance</button>
-
-
 									</div>
+								</center>
 
 
 									<br><br>
 									<div class="boxes">
+										<article>
+											<div class="filterBlogDiv feminist theory">
+											<h4><a href="/readings/killjoy-manifesto.html">A Killjoy Manifesto</a></h4>
+											<p>
+												2017. "Conclusion 2: A Killjoy Manifesto", Living a Feminist Life, Sara Ahmed
+												<br>
+												 Tags: Feminist Theory, Theory
+											</p>
+											<br><br>
+										</div>
+										</article>
+										<article>
+											<div class="filterBlogDiv queer feminist theory">
+											<h4><a href="/readings/visible-identities.html">Queer Phenomenology: Orientations, Objects, Others</a></h4>
+											<p>
+												Sara Ahmed. 2006. Queer Phenomenology: Orientations, Objects, Others. Duke University Press. ISBN: <a href="https://www.dukeupress.edu/queer-phenomenology" target="_blank">978-0-8223-3914-4</a>
+												<br>
+												 Tags: Feminist Theory, Queer Theory, Theory
+											</p>
+											<br><br>
+										</div>
+										</article>
+										
 										<article>
 											<div class="filterBlogDiv identity theory">
 											<h4><a href="/readings/visible-identities.html">Visible Identities: Race, Gender, and the Self</a></h4>
@@ -76,6 +108,29 @@
 												Linda Martín Alcoff. 2006. Visible Identities: Race, Gender, and the Self. Oxford University Press. <a href="https://doi.org/10.1093/0195137345.001.0001" target="_blank">https://doi.org/10.1093/0195137345.001.0001</a>
 												<br>
 												 Tags: Identity, Theory
+											</p>
+											<br><br>
+										</div>
+										</article>
+										<article>
+											<div class="filterBlogDiv identity queer essay">
+											<h4><a href="/readings/queer-the-writer.html">To(o) Queer the Writer—Loca, escritora y chicana</a></h4>
+											<p>
+												Gloria Anzaldúa. 2009. "To(o) Queer the Writer—Loca, escritora y chicana", The Gloria Anzaldúa Reader. 
+												<a href="https://doi.org/10.1215/9780822391272-024" target="_blank">https://doi.org/10.1215/9780822391272-024</a>
+												<br>
+												 Tags: Essay, Identity, Queer Theory
+											</p>
+											<br><br>
+										</div>
+										</article>
+										<article>
+											<div class="filterBlogDiv discourse definition">
+											<h4><a href="/readings/how-to-do-things-with-words.html">How to Do Things with Words</a></h4>
+											<p>
+												Austin, J. L. (1962). Lecture 1. How to Do Things with Words. Oxford: University Press.
+												<br>
+												 Tags: Discourse, Definition
 											</p>
 											<br><br>
 										</div>
@@ -113,7 +168,17 @@
 											<br><br>
 										</div>
 										</article>
-
+										<article>
+											<div class="filterBlogDiv queer theory inequity">
+											<h4><a href="/readings/queer-dinners.html">Queer Dinners</a></h4>
+											<p>
+												Matt Brim. 2020. "Introduction: Queer Dinners", Poor Queer Studies: Confronting Elitism in the University.
+												<br>
+												Tags: Queer Theory, Inquity, Theory
+											</p>
+											<br><br>
+										</div>
+										</article>
 									</article>
 									<article>
 										<div class="filterBlogDiv surveillance identity inequity">
@@ -126,8 +191,52 @@
 										<br><br>
 									</div>
 									</article>
-
-										<article>
+									<article>
+										<div class="filterBlogDiv theory identity queer feminist">
+										<h4><a href="/readings/bodies-that-matter.html">Bodies That Matter: On the Discursive Limits of "Sex"</a></h4>
+										<p>
+											Judith Butler. Bodies That Matter: On the Discursive Limits of "Sex". New York: Routledge, 1993. 
+											<br>
+											Tags: Identity, Theory, Queer Theory, Feminist Theory
+										</p>
+										<br><br>
+									</div>
+									</article>
+									<article>
+										<div class="filterBlogDiv identity essay queer">
+										<h4><a href="/readings/radical-queer-politics.html">Punks, Bulldaggers, and Welfare Queens: The Radical Potential of Queer Politics?</a></h4>
+										<p>
+											Cathy J. Cohen. Punks, Bulldaggers, and Welfare Queens: The Radical Potential of Queer Politics?. GLQ 1 May 1997; 3 (4): 437–465. DOI:<a href=" https://doi.org/10.1215/10642684-3-4-437" target="_blank"> https://doi.org/10.1215/10642684-3-4-437</a>
+											<br>
+											Tags: Essay, Identity, Queer Theory
+										</p>
+										<br><br>
+									</div>
+									</article>
+									
+								<article>
+									<div class="filterBlogDiv theory queer queer-of-color">
+									<h4><a href="/readings/normative-strivings.html">Of Our Normative Strivings</a></h4>
+									<p>
+										Roderick A. Ferguson; Of Our Normative Strivings: AFRICAN AMERICAN STUDIES AND THE HISTORIES OF SEXUALITY. Social Text 1 December 2005; 23 (3-4 (84-85)): 85–100. doi: <a href="https://doi.org/10.1215/01642472-23-3-4_84-85-85" target="_blank">https://doi.org/10.1215/01642472-23-3-4_84-85-85</a>
+										<br>
+										 Tags: Queer Theory, Theory, Queer of Color Critique
+									</p>
+									<br><br>
+								</div>
+								</article>
+								<article>
+									<div class="filterBlogDiv theory queer">
+									<h4><a href="/readings/history-of-sexuality.html">The History of Sexuality</a></h4>
+									<p>
+										Michel Foucault. 1976. The History of Sexuality Volume 1: An Introduction.
+										<br>
+										 Tags: Queer Theory, Theory
+									</p>
+									<br><br>
+								</div>
+								</article>
+									<article>
 											<div class="filterBlogDiv theory methods">
 											<h4><a href="/readings/value-sensitive-design.html">Value Sensitive Design</a></h4>
 											<p>
@@ -137,9 +246,8 @@
 											</p>
 											<br><br>
 										</div>
-										</article>
-
-										<article>
+									</article>
+									<article>
 											<div class="filterBlogDiv transparency methods">
 											<h4><a href="/readings/datasheets-for-datasets.html">Datasheets for Datasets</a></h4>
 											<p>
@@ -149,7 +257,98 @@
 											</p>
 											<br><br>
 										</div>
-										</article>
+									</article>
+									<article>
+										<div class="filterBlogDiv queer theory">
+										<h4><a href="/readings/quare-studies.html">Quare" studies, or (almost) everything I know about queer studies I learned from my grandmother</a></h4>
+										<p>
+											E. Patrick Johnson (2001) "Quare" studies, or (almost) everything I know about queer studies I learned from my grandmother, Text and Performance Quarterly, 21:1, 1-25, DOI: <a href="https://www.tandfonline.com/doi/abs/10.1080/10462930128119" target="_blank">10.1080/10462930128119</a>
+
+											<br>
+											Tags: Queer Theory, Theory
+										</p>
+										<br><br>
+									</div>
+									</article>
+									<article>
+										<div class="filterBlogDiv philosophy-science methods definition">
+										<h4><a href="/readings/ways-of-knowing.html">Ways of Knowing: Competing Methodologies in Social and Political Research</a></h4>
+										<p>
+											Moses, J. W., & Knutsen, T. L. (2019). Ways of knowing: Competing methodologies in social and political research. Macmillan International Higher Education.
+											<br>
+											 Tags: Philosophy of Science, Methods, Definition
+										</p>
+										<br><br>
+									</div>
+								</article>
+								<article>
+									<div class="filterBlogDiv queer">
+									<h4><a href="/readings/cruising-utopia.html">Cruising Utopia: The Then and There of Queer Futurity.</a></h4>
+									<p>
+										Muñoz, José Esteban. 2009. Cruising Utopia: The Then and There of Queer Futurity. New York: New York University Press. 
+										<br>
+										 Tags: Queer Theory
+									</p>
+									<br><br>
+								</div>
+								</article>
+								<article>
+									<div class="filterBlogDiv queer identity theory">
+									<h4><a href="/readings/disidentifications.html">Disidentifications: Queers of Color and the Performance of Politics</a></h4>
+									<p>
+										Muñoz, José Esteban (1999). Disidentifications: Queers of Color and the Performance of Politics. Minnesota: University of Minnesota Press.
+										<br>
+										Tags: Theory, Queer Theory, Identity
+									</p>
+									<br><br>
+								</div>
+								</article>
+								<article>
+									<div class="filterBlogDiv queer decolonial">
+									<h4><a href="/readings/decolonial-queer.html">Reflecting on Decolonial Queer</a></h4>
+									<p>
+										Pereira, Pedro Paulo Gomes. 2019. “Reflecting on Decolonial Queer.” GLQ 25 (3): 403–429. 
+										<br>
+										Tags: Decolonial Studies, Queer Theory
+									</p>
+									<br><br>
+								</div>
+								</article>
+								<article>
+									<div class="filterBlogDiv queer">
+									<h4><a href="/readings/polyqueer.html">Polyqueer Sexualities</a></h4>
+									<p>
+										Schippers, Mimi. Polyqueer Sexualities. <i>Beyond Monogamy: Polyamory and the Future of Polyqueer Sexualities.</i> NYU Press, 2016. 
+										<br>
+										 Tags: Queer Theory
+									</p>
+									<br><br>
+								</div>
+							</article>
+									<article>
+											<div class="filterBlogDiv queer essay">
+											<h4><a href="/readings/queer-and-now.html">Queer and Now</a></h4>
+											<p>
+												Eve Kosofsky Sedgwick. 1993. "Queer and Now", Tendencies.
+												<a href="https://doi.org/10.1215/9780822381860" target="_blank">https://doi.org/10.1215/9780822381860</a>
+												<br>
+												 Tags: Essay, Queer Theory
+											</p>
+											<br><br>
+										</div>
+									</article>
+									<article>
+											<div class="filterBlogDiv queer identity definition essay">
+											<h4><a href="/readings/languages-of-sexuality.html">The Languages of Sexuality</a></h4>
+											<p>
+												Weeks, J. (2011). The Languages of Sexuality. London: Routledge, 
+												<a href="https://doi.org/10.4324/9780203930328" target="_blank">https://doi.org/10.4324/9780203930328</a>
+												<br>
+												 Tags: Essay, Identity, Queer Theory, Definition
+											</p>
+											<br><br>
+										</div>
+									</article>
 									</div>
 									
 								</section>
