@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>A review of facial gender recognition - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>A review of facial gender recognition</h2>
+
+									Ng, CB., Tay, YH. & Goi, BM. A review of facial gender recognition. Pattern Anal Applic 18, 739–755 (2015). https://doi.org/10.1007/s10044-015-0499-6
+									<br><br>
+
+									<h3>Gender Recognition</h3>
+									The authors posit gender as a significant attribute for applications of biometrics, surveillence, marketing, and HCI that would benefit from automated gender classification. In this paper, they discuss both 
+									social and technical challenges to automated gender classification (AGR) and present a survey on current methods and data used for AGR. In presenting this work, they discuss how humans can "easily" differentiate between "a male and a female," setting up the assumptions or worldview of 
+									gender in this piece. They also propose computer vision as non-intrusive, but not requiring human cooperation, as a benefit of computer vision. <br><br>
+
+									<h3>Potential Applications</h3>							
+									<ul>
+										<li>
+											Human-computer interaction, in this case, personalization which the authors feel would be more "human-like" when recognizing gender.
+										</li>
+										<li>
+											Video surveillence. They propose uses like restricting areas to single-gender and monitoring for rule breakers. They also seem to propose building gender segregation around monitoring systems.
+										</li>
+										<li>
+											Biometrics, or basically face recognition augmented with gender. For example, if searching for a specific person, the database can be first assessed by gender if that person's gender is known.
+										</li>
+										<li>
+											Demographic collection, particularly in the context of marketing. Basically collecting gender information for statistics.
+										</li>
+										<li>
+											Advertisement and recommender systems, for recommending specific products by gender.
+										</li>
+									</ul>		
+
+									<h3>Pipeline</h3>
+									<ol>
+										<li>
+											Input image or video.
+										</li>
+										<li>
+											Face detected. This process is decoupled from the gender classification algorithm, and thus the face detector performance will impact gender classification downstream.
+										</li>
+										<li>
+											Image cropped to face / bounding boxed.
+										</li>
+										<li>
+											Pre-processing steps as defined by researcher (e.g., normalization of contrast or brightness, cropping out regions like hair, geometric alignment, downsizing).
+										</li>
+										<li>
+											Feature extraction.
+										</li>
+										<li>
+											Binary classification (male/female)
+										</li>
+									</ol>
+									<h3>Feature Extraction</h3>
+									The authors posit this as the most important step and so dedicate a section to it. There are two approaches.
+
+									<br><br>
+									(1) Geometric: Based on measurements of facial landmarks (ficudial distances = the distance between points on the face). 
+									<br><br>
+
+									(2) Appearance-based: "Based on some operation
+									or transformation performed on the pixels of an image.
+									This can be done at the global or local level. At the global
+									level, features are computed from the whole image
+									resulting in a single feature vector. In local feature
+									extraction, the image is partitioned beforehand into some
+									arbitrary regions (which may be equally spaced or otherwise) or into semantically meaningful regions such as eyes,
+									nose and mouth areas." The authors state global approaches are best for when gender features are not known prior. Local approaches focus on 
+									regions of the face (e.g., periocular). Appearance-based approahces include: pixel intensity values, rectangle features, local binary patterns, scale invariant feature transform (SIFT), gabor wavelets, and a few others named in the paper. They also discuss using external cues, like hair and clothing, as an option. 
+
+									<h3>Challenges</h3>
+									Technical: Head pose, lighting, image quality.<br><br>
+
+									Social: Age, ethnicity, expression, occlusion, facial hair ("But since these can be
+									different between the genders, they may also provide useful
+									discriminative cues.")
+
+							
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
