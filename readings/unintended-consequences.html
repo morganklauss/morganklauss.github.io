@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>A Framework For Understanding Sources of Unintended Consequences in Machine Learning - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>A Framework For Understanding Sources of Unintended Consequences in Machine Learning</h2>
+									
+									Harini Suresh and John Guttag. 2019. A Framework For Understanding Sources of Unintended Consequences in Machine Learning.						
+									<br><br>
+
+									This paper provides six sources of harm spanning from data to model in machine learning. They posit the focus solely on data as incorrect, as the entire pipeline of ML involves 
+									human decision-making and thus bias can be introduced. The categories of bias they introduce are not exclusive and may overlap. They also offer some 
+									mathematical mitigations for aggregation and representation bias. <br><br>
+
+									<h3>Machine Learning Pipeline</h3>
+
+									Where problems can arise... <br><br>
+
+									<b>Data collection</b>: "Data collection involves selecting a population, as well as picking
+									and measuring features and labels to use"<br><br>
+
+									<b>Data preparation</b>: "Depending on the data modality and
+									task, different types of preprocessing may be applied to the
+									dataset before using it. Datasets are usually split into a training data used during model development, and testing data
+									used during model evaluation. Part of the training data may
+									be further set aside as validation data."<br><br>
+									
+									<b>Model development</b>: "A number of different model types, hyperparameters, and
+									optimization methods may be tested out at this point; usually these different configurations are compared based on
+									their performance on the validation data, and the best one
+									chosen. The particular performance metric(s) used in such
+									comparisons are chosen based on the task and data characteristics; common choices are accuracy, false or true positive rates (FPR/TPR), and area under the receiver operating
+									curve (AUC)"<br><br>
+
+									<b>Model evaluation</b>: "Aside from the testing data, other available datasets – also called benchmark
+									datasets – may be used to demonstrate model robustness or
+									to enable comparison to different existing methods. As in
+									model development, choosing well-suited performance metric(s) is important."<br><br>
+
+									<b>Model postprocessing</b>: "Once a model is ready to be used,
+									there are various post-processing steps that may need to be
+									applied. For example, if the output of a model performing
+									binary classification is a probability, but the desired output
+									to display to users is a binary answer, there remains a choice
+									of what threshold(s) to use to round the probability to a hard
+									classification"<br><br>
+
+									<b>Model deployment</b>: "Importantly, there is no guarantee that the population a model sees as input after it is deployed looks the same as the population it saw during training and evaluation. We will refer to these two populations
+									as the development population and use population, respectively. The development population can be further split into
+									training population, testing population, and external benchmark populations, that are used at different points during a
+									model’s training and evaluation."<br><br>
+
+									<h3>Sources of Harm</h3>
+
+									<b>Historical bias</b>: A misalignment between reality and the values encoded in a model. It exists even with perfect sampling and feature selection. 
+									The bias stems from how the world is, or was when the data was collected. A classic example is crime data being disproportionately weighted against minority groups. Societal 
+									biases can be amplified in machine learning models, which then contribute to furthering the bias (e.g., there are few women CEOs, so the ML model only returns images of male CEOs, furthering the perception women cannot be CEOs).
+								 
+									<br><br>
+
+									<b>Representation bias</b>: Occurs in the sampling, underepresenting part of the population and failing to generalize well. It can arise in two ways: (1) The sampling methods only reach a portion of the population, so they become underrepresented in the dataset; and (2) the population has changed or is distinct from the training population, such as trying to generalize from one locale to another.
+									<br><br>
+
+									<b>Measurement bias</b>: Happens during feature selection and labeling. They can be proxies for desired labels or features (e.g., arrest rates as a proxy for crimes committed). The chosen set of features or labels might leave out important characteristics or "introduce group- or input-independent noise that leads to differential performance." Proxies may also be measured differently across groups (differential measurement error). 
+									The authors name three ways measurement bias occurs: (1) The measurement process differs across groups, like when some groups are monitored in more detail than others and thus wind up in the data more often; (2) The quality of the data varies across groups, like when structural discrimination in medical settings leads to lower diagnoses in women; and (3) The defined classification task is oversimplified, such as using simple labels as proxies for complex predictions. 
+									<br><br>
+
+									<b>Aggregation bias</b>: Happens during the model construction phase "when distinct populations are inappropriately combined." A one-size-fits-all model is designed to be used for differential groups. It can lead to models that do not work on any groups, or fit only to the dominant population when combined with representation bias. When important factors influence the outcomes for different subgroups, a one-size-fits-all model is likely not to work well on any subgroup.
+									<br><br>
+
+									<b>Evaluation bias</b>: Occurs in the model iteration and evaluation phases when "testing or external benchmark populations to not equally represent the various parts of the use population." It can also arise when the performance metrics aren't appropriate to real world use. 
+									"A
+									misrepresentative benchmark encourages the development
+									of models that only perform well on a subset of the population.
+									Evaluation bias ultimately arises because of a need to objectively compare models against each other." This can lead practioners to overfit to specific benchmarks, which are not necessarily representative. 
+									<br><br>
+
+									<b>Deployment bias</b>: When a system is used or interpreted incorrectly or not as intended. 
+									<br><br>
+
+									<img src="/images/unintended-consequences.png">
+
+									<br><br>
+
+									<h3>Fairness Definitions</h3>
+
+									<b>Group-independent predictions</b>: "require that the decisions that are made are independent
+									(or conditionally independent) of group membership. For
+									example, the demographic parity criterion requires that
+									predictions are uncorrelated with the sensitive attribute."
+									<br><br>
+
+									<b>Equal metrics across groups</b>: "require equal prediction metrics of some sort (this could be accuracy, true positive
+									rates, false positive rates, and so on) across groups. For
+									example, the equality of opportunity criterion requires
+									equal true positive rates across groups"
+									<br><br>
+
+									<b>Individual fairness</b>: "requires that individuals who are similar with respect to the prediction task are treated similarly."
+									<br><br>
+
+									<b>Causal fairness</b>: "place some requirement on the
+									causal graph that generated the data and outcome. For example, counterfactual fairness requires that there is not a
+									causal pathway from a sensitive attribute to the outcome
+									decision"
+									<br><br>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

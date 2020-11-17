@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Saving Face - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing</h2>
+									
+									Inioluwa Deborah Raji, Timnit Gebru, Margaret Mitchell, Joy Buolamwini, Joonseok Lee, and Emily Denton. 2020. Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing. In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society (AIES '20). Association for Computing Machinery, New York, NY, USA, 145–151. DOI:https://doi.org/10.1145/3375627.3375820
+									<br><br>
+									
+									This paper demonstrates five ethical concerns with facial recognition auditing practices, focused on helping auditors avoid exacerbating 
+									harms through the auditing process. They caution organizations advocating for regulation or banning of facial recognition not to take audits at face value due to underlying ethical concerns. 
+									The authors develop Celeb-SET as a benchmark for evaluating the audit development process.<br><br>
+
+									<h3>Ethical Design Considerations</h3>
+									Considerations for designing an algorithmic audit.
+									<br><br>
+
+									<b>Selecting Scope of Impact</b>: Audits are often designed to target specific demographics, tasks, or companies, but this can also limit the 
+									scope of impact of the audit. As such, the authors argue the insitutions that own the model to overfit improvements to the specified group or task. The results of a benchmark are also scoped 
+									to the representation of groups in that benchmark. If one group is highly underrepresented, the benchmark results are not generalizable. The authors challenge 
+									auditors to think through how both correct and incorrect classifications can have negative consequences for different subgroups. <br><br>
+
+									<b>Auditing for Procedural Fairness</b>: Audits should consider the real-world implications of deployment of a model. They recommend auditing for procedural fairness, which means fair decision making. Procedural fairness for 
+									machine learning might include interpretability methods for understanding how decisions are made by the model, an analysis of how the training and evaluation and validation data were developed, the type of testing performed, and the documentation of the model.
+									<br><br>
+
+									<h3>Ethical Tensions</h3>
+									Situations where different ethical approaches conflict.
+									<br><br>
+
+									<b>Privacy and Representation</b>: Collecting sufficient data for auditing poses privacy concerns and risks for data subjects. Data storage and dissemination should be considered 
+									given it may be accessible beyond the auditing. Consent is often violated in machine learning, by collecting public data. Privacy and consent violations are more common for 
+									marginalized groups, given benchmarks are often developed to better train, test, validate, and audit on them. Efforts to better represent a group may be exploitative, even unintentionally. Better representation 
+									may also be undesirable by the groups being targeted for data collection.<br><br>
+
+									<b>Intersectionality and Group-Based Fairness</b>: For analyzing group fairness, individual identities must be simplified into categories to be tested. Disaggregated analysis 
+									"fails to capture how systems of power and oppression give rise to qualitatively different experiences for individuals holding multiply marginalized identities" (pg. 149). The authors 
+									highlight a "fairness gerrymandering effect," where focusing on fairness for one group may exclude considerations of another. <br><br>
+
+									<b>Transparency and Overexposure</b>: Communicating the context of creation and of use of a dataset, and its limitations, can inform those using it how it should be used and not used. Publicly disclosing the 
+									targets of the audit can also put pressure on them to improve their models. However, this may lead to targets of audits overfitting their models to improve on specific results. Further, some companies have reacted by removing public access 
+									to APIs that have been audited.  
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

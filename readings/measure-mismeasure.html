@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Measure and Mismeasure of Fairness - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>The Measure and Mismeasure of Fairness</h2>
+									
+									Sam Corbett-Davies and Sharad Goel. 2018.
+									The Measure and Mismeasure of Fairness: A Critical Review of Fair Machine Learning.
+									Working paper.
+									<br><br>
+									<h3>Summary</h3>
+
+									This paper surveys three prominent definitions of fairness in algorithmic fairness literature: (1) anti-classification, purposefully ignoring sensitive human characteristics for 
+									algorithmic decision-making; (2) classification parity, where predictive performance measures are equal across different defined groups; and (3) calibration, where outcomes are independent of protected characteristics. 
+									The authors showcase the statistical limitations each approach suffers from. They state that they are all poor methods for detecting discrimination in algorithms, and using them when designing models can actually harm the groups trying to be protected. 
+									They argue a less formal approach, "to treat similarly risky people similarly, based on the most statistically accurate estimates of
+									risk that one can produce" (pg. 1).<br><br>
+									
+									<h3>Issues</h3>
+
+									<b>Anti-classification</b>: It is often necessary to consider protected characteristics. The authors offer the example that women are statistically less likely to commit violent crime than men, making equally weighted 
+									gender recidivism prediction biased against women. They argue that even the use of unprotected traits as proxies for protected ones (e.g., gender) can result in discriminatory outcomes. They advocate for not removing protected features.<br><br>
+
+									<b>Classification parity</b>: Differences in group-level risk accuracy should be expected when groups do not pose the same risk. Balancing for classification 
+									may be inaccurate to the social reality of risk. Adjusting measures may incorrectly classify low-risk people as high-risk and vice versa.<br><br>
+									
+									<b>Calibration</b>: They state this is a weak guarantee of equity, using in particular the practice of redlining. By purposefully choosing to focus on features not directly associated with protected characteristics, like race, 
+									and instead on neighborhoods, ignoring other factors like income and credit history, the risk scores might be calibrated to deny loans to creditworthy minorities by neighborhood. This can also happen inadvertently, by accidentally ignoring important features 
+									accurate to risk prediction.<br><br>
+
+									<h3>Proposed Fairness</h3>
+
+									They write that many practioners seek a fairness that best captures individual risk and then similarly risky individuals will be treated similarly, regardless of group membership. 
+									They propose the desire for a "threshold policy," which aligns with legal standards for fairness and would allow decision makers to set thresholds of acceptable risk scores. However, such a threshold would generally 
+									violate classification parity and may violate anti-classification as many use sensitive characteristics. <br><br>
+
+									<h3>Data Bias</h3>
+
+									Data is often imbued with discriminatory histories. The authors discuss both measurement error and sample bias in training data. They state that the outcome may be 
+									incorrectly observed, as in label bias (e.g., minorities are disproportionately labelled criminals). With arrest data, its historical bias is difficult to assess. 
+									Another data issue is called subgroup validity, where the predictive power of certain features vary across groups. Depending on how data was documented, some features may have more 
+									predictive power for some groups than others. 
+
+									<h3>Discrimination in Law and Economics</h3>
+									Two types of economic discrimination, highly focused on utility: <br>
+									(1) Statistical: "decision
+									makers explicitly consider protected attributes in order to optimally achieve some non-prejudicial goal" (pg. 4). 
+									<br>
+									(2) Taste-based: "decision makers act as if they have
+									a preference or “taste” for bias, sacrificing profit to avoid certain transactions" (pg. 4). This is independent of intent; it can be intentional or implicit bias. <br><br>
+
+									Law is more focused on motivation than utility. Law prohibits government agencies from enacting purposefully discriminatory policies, and it 
+									allows for limited used of otherwise protected attributes for goals like promoting diversity. The authors state that the principle of anti-classification is 
+									largely aligned with current legal standards, though current law also points towards classification for the sake of equitible goals as acceptable. The law also prohibits "unjustified disparities" without 
+									needing to prove motivation or intent. <br><br>
+
+									<h3>Limitations of Prevailing Mathematical Definitions of Fairness</h3>
+
+									<h4>Limitations of anti-classification</h4>
+
+									The authors examine other instances of discrimination where protected attributes have not been used, such as pre-1960s literacy tests used to disenfranchise African Americans and other racial minorities. Some have argued then to also excluse "proxies" of protected classes, as well as their explicit definitions. However, they discuss the difficulty of 
+									removing proxies given "nearly every covariate commonly used in predictive models
+									is at least partially correlated with protected group status; and in many situations, even strongly correlated
+									covariates may be considered legitimate factors on which to base decisions" (pg. 9). They argue that there is value to explicitly including protected group traits, making the debate around proxies irrelevant. 
+									Their guidance is as follows: "When gender or other protected traits add predictive value, excluding these attributes will in general
+									lead to unjustified disparate impacts; when protected traits do not add predictive power, they can be safely
+									removed from the algorithm" (pg. 10). <br><br>
+
+									<h4>Limitations of classification parity</h4>
+
+									The authors argue that equalized fairness across a confusion matrix are problematic measures of fairness. They state that "it is hard to determine whether differences
+									in error rates are due to discrimination or to differences in the risk distributions" (pg. 12). In discussing issues with Precision rates asn example, they write "a lower precision for one group may either mean that the group faces a lower threshold or that the group has a lower base rate" (pg. 12-13).
+									 In assessing the issues with classification parity, they acknowledge that differential base predictions may be higher for certain groups because of <i>social</i> discriminations unaccounted for in the algorithm. The algorithm may be accurately classifying existing patterns, which are socially unfair. 
+									 They also argue that false positive rates can be a misleading measure of fairness, given their close relationship with base rates and risk distribution. <br><br>
+
+									 <h4>Limitations of calibration</h4>
+
+									 Calibration is focused on equalizing risk scores for different groups (e.g., white and Black defendents with a risk score of 7 actually recidivate at the same rate). The authors argue that calibration may be inaccurate and therefore inequitable, particularly around proxies. 
+									 They discuss the example of loan thresholds, where in one zip code both white and Black residents have similarly low default but another zip code, with primarily Black residents, has high default rates. Calibration would then deny loans to nearly all Black applicants due to being calibrated on zip code. 
+									 "Assessments that either intentionally or inadvertently ignore predictive information may facilitate discriminatory decisions while satisfying
+									 calibration" (pg. 16).<br><br>
+
+									 <h3>Open challenges to equitible algorithms</h3>
+
+									 <h4>Measurement error</h4>
+
+									 Label bias, bias associated with the inherent social issues within the data, such as arrest rate labels being racially skewed. Feature bias is when specific features of the data are overstimated due to label bias. They argue label bias is one of the most significant barriers to fairness metrics, while feature bias is more easily dealt with. Feature bias can be weighted to account for social biases. For example, one can under-weight drug arrests for Black defendents 
+									 knowing that research has uncovered higher arrest rates for Black people for the same drug crimes than whites. <br><br>
+
+									 <h4>Sample bias</h4>
+
+									 Biases that arise from skewed data samples, as showcased in Buolamwini and Gebru's GenderShades work. Sample bias can also arise in the same contexts or regions, even if the data is representative, due to changing policies or regimes. It can be difficult to get 
+									 data that is accurately representative of the population the predictive model is meant to assess, particularly in small locales. <br><br>
+
+									 <h4>Model form and interpretability</h4>
+
+									 When a feature space is low-dimensional, as in there are few features, and there is a great deal of training data, the statistical approach is less important; similar results will be gleaned. 
+									However, "when the feature space is high-dimensional or the training data are less plentiful, it becomes important to carefully consider the precise functional form of the statistical estimator, an ongoing
+									 challenge in supervised machine learning more broadly" (pg. 19-20). There has also traditionally been a tradeoff between high accuracy and interpretability, where increasingly accurate models become difficult for 
+									 humans to understand. <br><br>
+
+									 <h4>Externanilities and equalibrium effects</h4>
+
+									 "Some
+									 decisions are better thought of as group rather than individual choices," such as the authors' example of the benefit of admitting a diverse pool of students meaning there are interdependencies between applicants. 
+
+									 Algorithms may also create feedback loops. For example, arrest histories in certain locations may lead police to further over police those locations. 
+
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
