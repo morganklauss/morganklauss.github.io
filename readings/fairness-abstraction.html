@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fairness and Abstraction in Sociotechnical Systems - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>Fairness and Abstraction in Sociotechnical Systems</h2>
+									
+									Andrew D. Selbst, Danah Boyd, Sorelle A. Friedler, Suresh Venkatasubramanian, and Janet Vertesi. 2019. Fairness and Abstraction in Sociotechnical Systems. In Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19). Association for Computing Machinery, New York, NY, USA, 59–68. DOI:https://doi.org/10.1145/3287560.3287598
+									<br><br>
+
+									The authors critique with computing fairness approaches that focus on abstraction and modular design, arguing that they "render technical interventions ineffective, in-accurate, and sometimes dangerously misguided when they enterthe societal context that surrounds decision-making systems" (pg. 59). They outline five "traps" fair machine learning approaches can fall into, and propose refocusing design from solution to process and to also include social actors, rather than solely technical ones. <br><br>
+
+									They criticize current work in ML fairness that "focuse[s] on trying to engineer fairer and more just machinelearning algorithms and models by using fairness itself as a property of the (black box) system" (pg. 59). They feel this approach treats fairness as abstract from social context, which misses the information necessary for creating fairer outcomes "or even to understand fairness as a concept ... Fairness and justice are prop-erties of social and legal systems like employment and criminaljustice, not properties of the technical tools within" (pg. 59). 
+
+									<h3>Abstraction Traps</h3>
+
+									<h4>The Framing Trap</h4>
+									Definition: "Failure to model the entire system over which a socialcriterion, such as fairness, will be enforced" (pg. 60). <br><br>
+
+									"The most common abstractions in machine learning consist ofchoosing representations (of data), and labeling (of outcomes)," 
+									choices that the authors term "the algorithmic frame" (pg. 60). The efficacy of a model is evaluated by its outputs properties, as defined by the input - what the authors term the "end-to-end property of the frame." The abstraction itself is treated as 
+									a given, without its reality being questioned, "despite the fact that abstractionchoices often occur implicitly, as accidents of opportunity andaccess to data" (pg. 60). The goal of the algorithmic frame is simply to capture an "accurate" relationship between data and labels, 
+									meaning fairness cannot be defined within the frame. Instead, fairness is focused on the inputs and outputs - what the authors term the "data frame." They argue that prioritizing the data frame in fairness shows that there is 
+									"larger social context to what appeared to be purely technical in the al-gorithmic frame" (pg. 60). However, they posit the data frame is still meant to abstract out problems of bias to a mathematical form. <br><br>
+
+									They instead recommend a "sociotechnical frame" which recognizes the model as a piece of a larger socio-technical system, where decisions made by humans and institutions are moved into the bounds of the algorithmic frame. For example, a failure to account for how a judge determines risk assessment scores when making outcome decisions about a defendent is not 
+									actually producing any fairer outcome; "a frame that doesnot incorporate a model of the judge’s decisions cannot provide theend-to-end guarantees that this frame requires" (pg. 61).
+									
+									<br><br>
+
+									<h4>The Portability Trap</h4>
+									Definition: "failure to understand how repurposing algorithmic solu-tions designed for one social context may be misleading,inaccurate, or otherwise do harm when applied to a different context" (pg. 61). <br><br>
+
+									The Framing Trap is often a result of The Portability Trap, where computer scientists are taught and expect code to be as abstract as possible, so that it is transferrable and more useful (due to its ability to be reused). This is also rewarded as "skillful, elegant, and beautiful" (pg. 61). 
+									It is deeply entrenched within the disciplinary culture of computer science. In machine learning, problems are categorized by the task to be solved (e.g., a classification task versus a recognition task), what the authors call "task-centric abstraction." They state this this insinuates the same solution (e.g., a classification model) can be easily applied in multiple contexts. Here, they state: "the problem 'enters' the system as data and exits the system as a prediction" (pg. 61). Many fairness researchers 
+									even attempt to supply portable fairness modules, or to at least provide a portable definition of fairness which can be optimized for any model. Others will seek to modify training data to fit a fixed definition of fairness. These issues occur not just when trying to port between domains (e.g., medical to judicial domains) but even between locales within the same domain (e.g., a court in one county to another).<br><br>
+
+									The authors argue that formalized assumptions, required to embed definitions of fairness, are not applicable to all social situations or groups, and thus should be tailored to application. This would then make the system non-portable. The authors argue that "to design systems properly for fairness, one must work around aprogrammer’s core programming" (pg. 61). 
+									<br><br>
+
+									<h4>The Formalism Trap</h4>
+									Definition: "Failure to account for the full meaning of social conceptssuch as fairness, which can be procedural, contextual,and contestable, and cannot be resolved through math-ematical formalisms" (pg. 61). 
+									<br><br>
+
+									The Formalism Trap deals with defining fairness, which, despite the "fundamentally vague notion of fairness in society" has been conceptualized as mathematical given ML models "speak math" (pg. 61). The authors argue that each definition of fairness in fair ML literature is 
+									inherently simplistic and cannot capture every aspect of fairness in philosophy, law, and sociology. They state that formalizing fairness mathematically results in two issues. <br><br>
+
+									The first issue is the impossibility of settling "irreconcilably conflicting defnitions using purely mathematical means" (pg. 62). They argue that for a definition to be appropriate it must be dictated by the social context (e.g., when are false positives appropriate or acceptable, etc.). <br><br>
+
+									The second issue is when no definition is valid for describing fairness. <br><br>
+
+									They describe the different aspects of fairness that make formalizing it difficult: <br><br>
+
+									<ul>
+										<li>
+											Procedurality: Law often takes a procedural approach to fairness, while ML takes an outcomes-based approach. They use an employment example: if someone is fired based on their gender or race, it is illegal, while the same person fired for another reason may not be illegal - therefore, fairness or legality is not dependent on the outcome, but the process. 
+										</li>
+										<li>
+											Contextuality: Discrimination is not necessarily "bad"; legal scholars instead term "bad" discrimination "wrongful discrimination." Similarly, the authors point to legal and sociological work that notes the contextual and cultural dependence on when bias is fair and when bias is unfair. Definitions of fairness are therefore contextual. 
+										</li>
+										<li>
+											Contestability: Fairness is constantly shifting, and court cases are always changing legal definitions of discrimination. Basically, concepts like fairness will always be contested, so the authors write that "to set them [fairness ideals] in stone—or in code [52]—is to pick sides, and to do so without transparent process violates democratic ideals" (pg. 62).
+										</li>
+									</ul>
+									<br>
+
+									<h4>The Ripple Effect Trap</h4>
+									Definition: "Failure to understand how the insertion of technologyinto an existing social system changes the behaviorsand embedded values of the pre-existing system" (pg. 62).<br><br>
+
+									They advocate for accounting for how a technology might influence or impact the behavior and practices of individuals, groups, society, and organizations. For example, avoiding mathematical predictions biasing a judge's decision about recidivism requires accounting for how the system might impact the judge's behaviors, perception of their role and expertise, and the power dynamics between the judge and other actors in the situation. 
+									Therefore, understanding how a technology might impact context requires not simply evaluating the abstract efficacy of a technology, but how the technology actually impacts behaviors when deployed and used. <br><br>
+
+									<h4>The Solutionism Trap</h4>
+
+									Definition: "Failure to recognize the possibility that the best solutionto a problem may not involve technology" (pg. 63).<br><br>
+
+									What might be described as the "law of the instrument" or "technological solutionism" is the inability to conceptualize a solution without a technological intervention. The authors argue that "by starting from the technology and working outwards, there is never an opportunity to evaluate whether the technology should be builtin the first place" (pg. 63). 
+									The argue that two scenarios signal when technology is a bad approach: (1) when definitions of fairness are politically contested and shifting (see The Formalism Trap); and (2) when modeling would be so complex it may be computationally implausible or impossible. Understanding whether to build a technology for a social problem requires understanding that problem and its context, as well as what fairness looks like in context. Some behaviors, concepts, and predictions are not measurable. <br><br>
+
+									<h3>Sociotechnical Perspectives</h3>
+
+									"Technical actors must shift from seek-ing a solution to grappling with different frameworks that provide guidance in identifying, articulating, and responding to fundamen-tal tensions, uncertainties, and connficts inherent in sociotechnical systems. In other words, reality is messy, but strong frameworks can help enable process and order, even if they cannot provide definitive solutions" (pg. 63). 
+									The authors propose sociotechnical approaches to each of the traps previously identified. <br><br>
+
+									<h4>An STS Lens on The Framing Trap</h4>
+									Definition: "Adopting a "heterogeneous engineering" approach" (pg. 63)<br><br>
+
+									Rather than choosing to focus only on the technical aspects of modeling, focus on both machine and human activities at the same time. 
+									A heterogenous engineering approach considers both the technical apparatus and how humans interact with and contribute to it. Boundaries of abstraction should be drawn to include humans and social systems. 
+									An STS heterogenous engineering approach combats The Framing Trap because "fairness cannot exist as a purely technical standard, thinking about people and their complex environments—such as relationships, organizations, and social norms—as part of the technical system from the beginning will help to cut down on the problems associated with framing and solutionism" (pg. 64). Of course, as more social context is implicated into a model, the less 
+									the technical benefits of abstraction work. However, the authors advocate that even a synthesis of one technical component and one social component will give better results than fully abstracted systems.<br><br>
+
+									<h4>An STS Lens on The Portability Trap</h4>
+									Definition: "Contextualizing user "scripts"" (pg. 64)<br><br>
+
+									Heterogenous engineering can also address this trap by situating models into specific contexts, domains or locales. User "scripts" (how the system is expected to function and be used in reality) may differ depending on local social and technical elements of a larger actor-network. 
+
+									<br><br>
+
+									<h4>An STS Lens on The Formalism Trap</h4>
+									Definition: "Identifying "interpretive flexibility," "relevant social groups,"and "closure"" (pg. 65) <br><br>
+
+									To avoid The Formalism Trap, the authors suggest "we should consider how different definitions of fairness, including mathematical formalisms, solve different groups’ problems byaddressing different contextual concerns" (pg. 65). They suggest adopting 
+									the SCOT (Social Construction of Technology) program. Like the definition above, the SCOT framework are steps of "interpretive flexibility experienced by relevant social groups, followed by stabilization, and eventually closure" (pg. 65). Basically, multiple 
+									design options that are considered viable are tested by examining different interpretations across relevant social groups. Designers then build different versions of the tool. Whichever version "wins" is based on whether the local social group considers it to solve the problem at hand, resulting in 
+									"closure." Other functional matters otherwise considered important (e.g., how fast the technology is) may be less important than meeting the goal. This can also be applied to fairness definitions and implementation. <br><br>
+
+									<h4>An STS Lens on The Ripple Effect Trap</h4>
+									Definition: "Avoiding "reinforcement politics" and "reactivity"" (pg. 64). <br><br>
+
+									Fair ML scholars should reference literature on common ripple effects when technologies are deployed. For example, technologies deployed in organizational settings often 
+									reproduce power inequities between management and employees (reinforcement politics). Another issue is when technologies alter the social context they are meant to support (reactivity barriers), which  
+									"may undermine social goals, exacerbate old problems and actively introduce new ones" (pg. 66). Given technologies are part of the social fabric, people may reinterpret technologies in unique ways. Fairness may even be reappropriated for 
+									the opposite goal. Unintended consequences are not always able to be eliminated, but engineers should attempt to predict them.<br><br>
+
+									<h4>An STS Lens on The Solutionism Trap</h4>
+									Definition: "Considering when to design" (pg. 66)
+									<br><br>
+
+									There are times that the ethical and fair solution is to not build. Engineers should first decide whether they should build, rather than to build for a predicted problem. Deciding whether to build requires engagement with potential users and social context, often through traditionally social science approaches. <br><br>
+
+									<h3>What to Do</h3>
+
+									The authors list five considerations for deciding whether to build a fair ML system:
+									<br><br>
+
+									"(1) is appropriate to the situation in the first place, which re-quires a nuanced understanding of the relevant social contextand its politics (Solutionism);<br>
+									(2) affects the social context in a predictable way such that theproblem that the technology solves remains unchanged afterits introduction (Ripple Effect); <br>
+									(3) can appropriately handle robust understandings of social requirements such as fairness, including the need for procedurality, contextuality, and contestability (Formalism); <br>
+									(4) has appropriately modeled the social and technical require-ments of the actual context in which it will be deployed (Portability);  <br>
+									<br>(5) is heterogeneously framed so as to include the data andsocial actors relevant to the localized question of fairness (Framing)" (pg. 66)
+									
+
+									<br><br>
+ 													
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
