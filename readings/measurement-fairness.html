@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Measurement and Fairness - Morgan Klaus Scheuerman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<ul class="icons">
+									<div class="header-left"><li>
+										<p style="font-size:15px;"><a href="/readings.html"><span class="icon solid fa-arrow-left"> Back to Reading List</span></a></p>
+									</li></div>
+									<li><b>SOCIAL</b><img src="https://static.wixstatic.com/media/697bc8_3b4cf3d1a498494e8b6e097004ae72b1~mv2.gif" height="12px" width="12px"></li>
+									<li><a href="https://twitter.com/morganklauss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/atravelingrad/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://medium.com/@morganklausscheuerman" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://www.linkedin.com/in/morgan-scheuerman/" class="icon brands fa-linkedin" aria-label="LinkedIn"></a></li>
+									<li><a href="https://github.com/morganklauss" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+
+									<h2>Measurement and Fairness</h2>
+									
+									Jacobs, A.Z. and Wallach, H. 2019. Measurement and Fairness.
+									<br><br>
+
+									This paper "introduce[s] the language of measurement modeling from the quantitative social sciences as a framework for understanding fairness in computational systems" (pg. 1).  A measurement model is defined as "a statistical model that links unobservable
+									theoretical constructs, operationalized as latent variables, and data about the world" (pg. 2).
+									They argue that computer systems are designed to measure unmeasurable attributes (e.g., credit worthiness, risk to society, work quality) through inferred observable properties, which may introduce mismatches between the construct itself (quality) and its operationalization and output. They argue that 
+									the harms in fair ML often stem from such mismatches. They further posit that disagreements around operationalizing fairness definitions are more often 
+									disagreements about the theoretical construct of fairness itself. Collapsing the differences between a theoretical construct and measurement can mask historical injustice. Measurement modeling is put forth as a tool for "testing assumptions about unobservable theoretical constructs, thereby making it easier to identify, characterize, and even mitigate fairness-related harms" (pg. 1). <br><br>
+
+									<h3>Measurement Modeling</h3>
+									The authors present examples of measurement modeling, often used in social science fields like psychology and education to measure otherwise 
+									abstract and unobservable constructs.
+									They begin with more "simple" constructs (height) and get increasingly more abstract to demonstrate how to use measurement modeling. <br><br>
+
+									<h4>Representational Measurements</h4>
+									Representational measurements are "representing physical objects and their relationships by numbers" (e.g., a ruler being used to measure a unit of height, like the height of a human) (pg. 4). 
+									They point out that even something which seems as straightforward as measuring height is confounded by a number of definitional constraints. If height is defined as the length of a person from the bottom of the feet to the top of the head, a number of questions arise. 
+									Does one include hair in height? What about those without legs, or in a wheelchair? What if the person has a slouch? Further, tools present confounding variables. For example, the angle of the ruler, granularity of measurement marks on that ruler, and human errors in measurement all 
+									add some level of noise to each measurement. Errors are often accounted for in equations by assuming errors are statistically unbiased, present small variance, and are normally distributed (measurement error models). However, measurement errors are not necessarily 
+									"well-behaved" and " be correlated with
+									sensitive attributes, such as race or gender" (pg. 4). For example, studies have shown that self-reporting height on data apps are more erroneous for men, who over-estimate their height. <br><br>
+
+									<h4>Pragmatic Measurements</h4>
+									Pragmatic measurements are used for constructs that are inherently unobservable (e.g., socioeconomic status). They are designed to capture data about aspects of the underlying unobservable phenomenon. 
+									For example, and observative property like "income" may be used to infer socioeconomic status. In operationalizing income for socioeconomic status, and also a measurement error model, "we are making our assumptions about the
+									relationships between the unobservable theoretical constructs of interest and the observed data explicit" (pg. 5). Further, there are other ways of measuring socioeconomic status beyond income, including: "years of education, location of residence, wealth, or occupation ... [and] other indicators drawn from observed properties, such as online purchasing
+									behavior or group affiliations" (pg. 5). 
+
+									<h4>Topic Modeling</h4>
+									Topic modeling is an interesting case because they are "unobservable theoretical constructs that are
+									indirectly evidenced" that involve inferring topics from observable data like words (pg. 5). With topic modeling, there is an implicit assumption there is no measurement error. <br><br>
+
+									<h3>Evaluating Measurement Models</h3>
+									The authors argue that the assumptions "about the relationships between unobservable theoretical constructs of interest, their
+									operationalizations, and the observed data" must be evaluated before relying on the measurements (pg. 6). Social scientists employ two forms of evaluation: 
+									construct validity (is it the right construct?) and construct reliability (is it able to be repeated?). These are furthered bolstered by interpretation (what does it mean?) and 
+									application (does it work as expected/intended?). The authors argue that "the language of measurement, with the tools of construct validity and reliability,
+									provide a concrete framework to assess whether, and how, operationalizations are useful matches
+									for the construct they try to measure" (pg. 6). <br><br>
+
+									<h4>Construct Validity</h4>
+									Definition: "the process of showing that an operationalization of an unobservable theoretical construct is meaningful and useful" (pg. 7).<br><br>
+
+									To examine the quality of a measurement construct, one must ask the following: Is the measurement centered around the construct of interest in a systematic manner? Do the measurements capture every relevant facet of the construct? Do measurements behave as expected and do we know why or why not? 
+									Do measurements vary in ways that might suggest we have captured inintended variables? Do the measurements help us answer meaningful questions? What are the social consequences of using these measurements? 
+									<br><br>
+
+									Measuring validity is not a simple binary, but a matter of critical reasoning and interrogating assumptions. The authors present a framework for assessing construct validity that involves seven components, synthesized from a variety of social science approaches: 
+									(1) face validity; (2) content validity; (3) convergent validity; (4) discriminant validity; 
+									(5) predictive validity; (6) hypothesis validity; and (7) consequential validity.<br><br>
+
+									<h5>Face Validity</h5>
+									Whether the measurements produced by a construct appear plausible given the researcher's or practioner's expertise. It is inherently subjective and is a first step in assessing construct validity. 
+									<br><br>
+
+									<h5>Content Validity</h5>
+									Whether the measurement model captures everything we believe relevant. This involves two types of agreement: (1) an agreed upon definition of the theoretical construct itself and (2) agreement between that definition and its operationalization. 
+									If there is a lack of agreement, we can still state our assumptions about the definition settled on. "Establishing content validity ensures that there is a substantive match between the observed world
+									being measured and all relevant aspects of the construct" (pg. 8). 
+									<br><br>
+
+									<h5>Convergent Validity</h5>
+									Whether measurement outputs are closely related to any existing measurements of the same construct where validity has already been established. 
+									"This type of validity is explored more
+									quantitatively, but can reveal qualitative differences between operationalizations" (pg. 9). <br><br>
+
+									<h5>Discriminant Validity</h5>
+									If our measurements capture other constructs, we must also assess the degree they are related to the construct of interest. Their measurements should be related
+									(whereas the previous three assessments "confirm that our measurements wholly capture the intended
+									construct" (pg. 9)). If two constructs are entirely unrelated, their measurements would have zero correlation.<br><br>
+									
+									<h5>Predictive Validity</h5>
+									Whether measurements are related to other external properties that were expected to influence our measurement. There are 
+									quantitative approaches ("do our measurements correlated with related properties?") and qualitative approaches ("do our
+									measurements vary with properties we expect them to?") (pg. 10). The focus is examining properties more broadly to see how they may or may not be related 
+									to our measurement construct. It is mostly "about showing that our constructs follow expected relationships
+									with properties that were not explicitly included in the model" (pg. 10). <br><br>
+
+									<h5>Hypothesis Validity</h5>
+									Whether or not the construct has been operationalized in a theoretically meaningful and useful way. This is helped established in convergent validity, so we can show that 
+									our operationalization is useful in comparison to others, particularly to test new hypotheses and ask new questions. Hypothesis validity 
+									can be established by replicating past construct measurements and establishing that measures of our construct are relevant to measurements of others in expected ways. <br><br>
+
+									<h5>Consequential Validity</h5>
+									Whether the construct should ever be used, regardless of how well it is operationalized. It is focused on downstream social impacts. 
+									In some cases, the measurement may be misleading due to social context (e.g., students from lower income households needing to take summer jobs, while students from higher income households can take unpaid internships; income would reflect inaccurately for the students). 
+
+									<h4>Reliability</h4>
+									While a measure must be valid, it must also be reliable; measured confounded by imprecise measurement, meaningless scales, instability, or inference are not useful. Rerunning a model should yield 
+									similar results. In computational modeling, "a lack of reliability could emerge from numerical
+									instability; a failure of the model to converge; strong dependence on particular physical processes, random seeds, or implementation" (pg. 11-12). Sensitivity of the model to outliers, small amounts of noise, and implementation may impact reliability 
+									and are often unreported in publication. <br><br>
+
+									<h3>Disagreements in Fairness Constructs</h3>
+									The authors review how fairness, as an inherently contested construct, have led to disagreements on recent fairness issues in ML. <br><br>
+
+									<h4>Parity- and Calibration-Based Fairness</h4>
+									A major disagreement has been around the COMPAS risk assessment tool. ProPublica argued that the tool was unfair in that it lack parity: it falsely labelled Black defendents as more risky at a higher rate than it did for white ones. Parity would argue that "rates of error and potential consequences must be the same across groups" (pg. 16). 
+									Northpointe, who developed the tool, argued their algorithm had calibration-based fairness - "for the same risk score, outcomes should be the same across groups" (pg. 16). The authors state 
+									"the disagreement between
+									these two operationalizations yields challenges to convergent validity (measures are misaligned)
+									and content validity (each capturing different theoretical understandings of fairness)" (pg. 16). Parity and calibration are theoretically in contradiction with one another. <br><br>
+
+									<h4>Individual and Group Fairness</h4>
+									Individual fairness approaches believe similar individuals should be treated similarly. Group fairness approaches believe that groups are classified similarly - individuals within one group are treated similarly to those in the same group, but may be treated differently than those in another group. Operationalizing these are often incompatible with one another, as they employ different theoretical views of fairness. 
+									<br><br>
+
+									<h4>Outcomes of Fairness: Justice, Due Process, Distribution, Equal Opportunity, Etc.</h4>
+
+									"Measurements of fairness that do not account for many of the different philosophical, legal, economic and practical notions of the theoretical construct of “fairness”
+									necessarily lack content validity. Operationalizations of fairness that fail to account for due process
+									and concepts of justice, distributive or otherwise, represent deep threats to consequential validity" (pg. 17). The construct of an outcome like "equal opportunity" is difficult to operationalize, and conflating operationalization with construct makes it more difficult to assess harms stemming from issues of validity. 
+									<br><br>
+
+									<h4>Sensitive Attributes</h4>
+									Attributes operationalized for, like race and gender, are essential to fairness and also themselves contested topics - across culture, geography, and time. Inferring attributes like 
+									race and gender come with underlying assumptions about agreed upon definitions of what they are and how they can be inferred. 
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Menu -->
+						<section>
+								<header class="main">
+									<center><a href="#" class="image"><img src="/images/mainphoto.jpg" alt="" width="200" height="200"/></a>								
+									<h1>Morgan Klaus Scheuerman</h1>
+								<article>
+									<p>PhD Student in <i>Information Science</i> at
+									University of Colorado Boulder
+									</p>
+								</center>
+								</article>
+								</header>
+								<header class="major">
+						</section>
+						<nav id="menu">
+								<ul>
+									<li><a href="/index.html">Home</a></li>
+									<li><a href="/pdfs/misc/ScheuermanCV.pdf">CV</a></li>
+									<li><a href="mailto:morgan.scheuerman@colorado.edu">Contact</a></li>
+									<li><a href="/research.html">Research</a></li>
+									<li><a href="/news.html">News</a></li>
+									<li><a href="/blog.html">Blog</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/gender-guidelines.html">HCI Gender Guidelines</a></li>
+											<li><a href="/readings.html">Reading List</a></li>
+										</ul>
+									</li>
+							</nav>
+						<!--Section-->
+						<section>
+							<center><a href="/gender-guidelines.html" class="button big">HCI Gender Guidelines</a></center>
+
+							<br>
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Morgan Klaus Scheuerman. 2020. All rights reserved.
+									Design adpted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
