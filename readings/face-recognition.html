@@ -40,7 +40,7 @@
 
 									<h2>Handbook of Face Recognition</h2>
 									
-									Stan Z. Li and Anil K. Jain. 2011. Chapter 1: Introduction. In <i>Handbook of Face Recognition (2nd. ed.).</i> Springer Publishing Company, Incorporated.
+									Stan Z. Li and Anil K. Jain. 2011. <i>Handbook of Face Recognition (2nd. ed.).</i> Springer Publishing Company, Incorporated.
 									<br><br>
 
 									<h3>Chapter 1: Introduction</h3>
@@ -102,8 +102,63 @@
 									(1) feature extraction for constructing a "good" feature space where face manifolds become simpler, through two-steps of processing (normalizing faces geometrically and photometrically, and "extract features in the normalized images
 									which are stable with respect to such variations, such as based on Gabor wavelets");  <br>
 									(2) "construct classification engines able to solve difficult nonlinear classification and regression
-									problems in the feature space and to generalize better."
+									problems in the feature space and to generalize better."<br><br>
 
+									<h3>Chapter 2: Face Detection</h3>
+									The first step to face recognition. 
+									Ideal face detection should detect all faces in a photo regardless of size, angle, position, expression, or lighting. 
+									Face detection is performed based on cues: "skin color (for faces in color images and videos), motion (for faces in videos), facial/head shape, facial appearance, or a combination of these parameters."
+									The basic steps are: "An input image is scanned at all possible locations and scales by a subwindow. Face detection is posed as classifying the pattern in the subwindow as either face or nonface. The face/nonface classifier is learned from face and nonface training examples using statistical learning methods."
+									AdaBoost methods are most commonly used due to positive performance. Other methods include non-linear methods, using neural nets or kernel-based methods.
+									<br><br>
+									
+									<h4>Appearance-Based Methods</h4>
+									This approach involves classifying each sub-window into two classes: face or no-face. The face/no-face classifier is 
+									taught, ideally, what a face looks like under a variety of lighting conditions. <br><br>
+
+									<h4>Preprocessing</h4>
+									<b>Skin color filtering</b> is used for skin color based segmentation, as the color distribution varies compared to non-human objects. 
+									"A simple color-based face detection algorithm consists of two steps: (1) segmentation of likely face regions and (2) region merging." 
+									However, skin color based detection tends to be less effective. "Although a color-based face detection system may be computationally attractive, the color constraint alone is insufficient for achieving high accuracy face detection. This is due to large facial color variation as a result of different lighting, shadow, and ethic groups. Indeed, it is the appearance, albeit colored or gray level, rather than the color that is most essential for face detection. Skin color is often combined with the motion cue to improve the reliability for face detection and tracking on video [49, 50]. However, the most successful face detection systems do not rely on color or motion information, yet achieve good performance." 
+									<br><br>
+
+									<b>Image normalization</b> is necessary because appearance-based methods operate on windows of a fixed size. "After normalization, the distribution of subwindow images becomes more compact and standardized, which helps reduce the complexity of the subsequent face/nonface classification."
+									<br><br>
+
+									<h4>Postprocessing</h4>
+									"A single face in an image may be detected several times at close locations or on multiple scales. False alarms may also occur but usually with less consistency than multiple face detections. 
+									The number of multiple detections in a neighborhood of a location can be used as an effective indication for the existence of a face at that location. This assumption leads to a heuristic for resolving the ambiguity caused by multiple detections and eliminating many false detections.
+
+									A detection is confirmed if the number of multiple detections is greater than a given value; and given the confirmation, multiple detections are merged into a consistent one." <br><br>
+
+									<h4>Performance Evals</h4>
+									Two types of data are recommended: (1) face icons of a fixed size, to evaluate the performance of the face/no-face classifier without being affected by merging; and (2) normal images, to test the overall system including the merging. 
+									"The face detection performance is primarily measured by two rates: the correct detection rate (which is 1 minus the miss detection rate) and the false alarm rate." <br><br>
+
+									<h3>Chapter 14: Evaluation Methods in Face Recognition</h3>
+									"Performance is reported on three standard tasks: verification (is this person who they claim to be?) and open-set (do we know this face? is the image a person in the gallery?) and closed-set identification (whose face is this?)." Each task has its own performance metrics. 
+									<br><br>
+									<h4>Open-Set Performance</h4>
+									Performance statistics used: The detection and identification rate and the false alarm rate. The detection and identification rate is the fraction of probes that are correctly detected and identified (with threshold T). 
+									The false alarm rate is the fraction of probes that are false alarms.<br><br>
+
+									"The ideal system would have a detection and identification rate of 1.0 and a false alarm rate of 0; all people in the gallery are detected and identified, and there are no false alarms. However, in real-world systems there is a trade-off between the detection and identification, and false alarm rates. By changing the operating threshold, the performance rates change. Increasing an operating threshold lowers both the false alarm rate and the detection and identification rate. Both these performance rates cannot be maximized simultaneously; there is a trade-off between them."
+									<br><br>
+
+									<h4>Verification Performance</h4>
+									The system compares the facial image to those in the database. "he comparison produces a similarity score. The system accepts the identity claim if the similarity score is greater than the system's operating threshold. The operational threshold is determined by the application, and different applications have different operational thresholds. Otherwise, the system rejects the claim."<br><br>
+
+									Two standard performance measures: (1) round robin; and (2) true imposter. <br><br>
+
+									<b>Round Robin</b>: "All scores between gallery and probe set samples are computed. All match scores between a gallery and a probe set are used to compute the verification rate, and all nonmatch scores are used to compute the false accept rate ... One complaint with the round robin protocol is that probes are used to generate both verification and false accept rates. There is a concern that this does not adequately model the situation where false identity claims are generated by people not in the gallery."<br><br>
+
+									<b>True Imposter</b>: "In the true imposter protocol, performance is computed from two probe sets, PG and PN. The verification rate is computed from the match scores between a gallery and PN. The number of match scores is the size of PG. The false alarm rate is computed from all nonmatch scores between the gallery and PN. These nonmatch scores are called true imposters because people in PN are not in the gallery."<br><br>
+
+									<h4>Closed-Set Performance</h4>
+									"Performance on the closed-set identification task is the classic performance statistic in face recognition. With closed-set identification, the question is not always "Is the top match correct?" but rather "Is the correct answer in the top n matches?"."<br><br>
+
+									<h4>Variability</h4>
+									The variability of performance dependent on the gallery and dependent on difference classes of probes (e.g., races). 
 								</section>
 
 						</div>
