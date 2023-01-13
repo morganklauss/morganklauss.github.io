@@ -1,0 +1,16 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv, #legendwrapper {
+  width: 100%;
+  height: 1200px;
+  border: 1px dotted #c99;
+  margin: 1em 0;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#legenddiv {
+  height: 120px;
+}
