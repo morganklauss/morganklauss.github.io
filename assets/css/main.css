@@ -1,5 +1,4 @@
 @import url(fontawesome-all.min.css);
-@import url(brands.min.css)
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
 	Editorial by HTML5 UP
@@ -1215,7 +1214,7 @@ input[type="radio"] + label:before {
   .icon.solid:before {
     font-weight: 900; }
   .icon.brands:before {
-    font-family: 'Font Awesome 7 Brands'; }
+    font-family: 'Font Awesome 5 Brands'; }
 
 /* Image */
 .image {
